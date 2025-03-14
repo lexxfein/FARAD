@@ -1,0 +1,131 @@
+[gd_scene load_steps=11 format=3 uid="uid://3qstrqch0mr2"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_bnx8v"]
+[ext_resource type="Texture2D" uid="uid://bots7wivffguw" path="res://Clouds/Clouds 7/1.png" id="2_ofuwa"]
+[ext_resource type="Texture2D" uid="uid://dhief6ikllo6v" path="res://Clouds/Clouds 7/2.png" id="3_efn61"]
+[ext_resource type="FontFile" uid="uid://cpdao1j71g4ed" path="res://Game Paused DEMO.otf" id="3_s5w0x"]
+[ext_resource type="FontFile" uid="uid://dov8ycup7qn1" path="res://Pixel Game.otf" id="4_hfye0"]
+[ext_resource type="Texture2D" uid="uid://ct4wr1hij1oy8" path="res://Clouds/Clouds 7/3.png" id="4_ltyhv"]
+[ext_resource type="Texture2D" uid="uid://cw6wk848ehv08" path="res://Clouds/Clouds 7/4.png" id="5_w241h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kl3q"]
+bg_color = Color(0.435294, 0.329412, 0.262745, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.215686)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nywv"]
+bg_color = Color(0.435294, 0.329412, 0.262745, 0.313726)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.207843)
+shadow_size = 5
+shadow_offset = Vector2(3.41, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tc4vc"]
+bg_color = Color(0.435294, 0.329412, 0.262745, 0.301961)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 5
+shadow_offset = Vector2(3.41, 3.41)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bnx8v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_top = -222.0
+offset_right = 90.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="1" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(89.5, -99)
+scale = Vector2(2.03299, 2.09259)
+texture = ExtResource("2_ofuwa")
+
+[node name="2" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(89.5, -100)
+scale = Vector2(2.03299, 2.08642)
+texture = ExtResource("3_efn61")
+
+[node name="3" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(458, -209)
+scale = Vector2(2.03125, 2.09259)
+texture = ExtResource("4_ltyhv")
+
+[node name="4" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(65, 257)
+scale = Vector2(2.63715, 2.27469)
+texture = ExtResource("5_w241h")
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../quit")
+theme_override_fonts/font = ExtResource("3_s5w0x")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_0kl3q")
+text = " START "
+
+[node name="options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s5w0x")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_1nywv")
+text = " OPTIONS "
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../start")
+theme_override_fonts/font = ExtResource("3_s5w0x")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_tc4vc")
+text = " QUIT "
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.5
+offset_top = -211.0
+offset_right = 328.5
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.482353, 0.337255, 0.466667, 1)
+theme_override_fonts/font = ExtResource("4_hfye0")
+theme_override_font_sizes/font_size = 200
+text = " GAME NAME "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
