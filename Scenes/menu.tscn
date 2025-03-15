@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://3qstrqch0mr2"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_ajh38"]
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_ajh38"]
 [ext_resource type="Texture2D" uid="uid://bots7wivffguw" path="res://Assets/Clouds/Clouds 7/1.png" id="2_6wnbc"]
 [ext_resource type="Texture2D" uid="uid://dhief6ikllo6v" path="res://Assets/Clouds/Clouds 7/2.png" id="3_jc7hy"]
 [ext_resource type="Texture2D" uid="uid://ct4wr1hij1oy8" path="res://Assets/Clouds/Clouds 7/3.png" id="4_t4bs7"]
@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://dov8ycup7qn1" path="res://Assets/Pixel Game.otf" id="7_c5cib"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kl3q"]
-bg_color = Color(0.435294, 0.329412, 0.262745, 0.2)
+bg_color = Color(0.435294, 0.329412, 0.262745, 0.317647)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -19,7 +19,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nywv"]
-bg_color = Color(0.435294, 0.329412, 0.262745, 0.313726)
+bg_color = Color(0.435294, 0.329412, 0.262745, 0.32549)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -29,7 +29,7 @@ shadow_size = 5
 shadow_offset = Vector2(3.41, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tc4vc"]
-bg_color = Color(0.435294, 0.329412, 0.262745, 0.301961)
+bg_color = Color(0.435294, 0.329412, 0.262745, 0.333333)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
